@@ -643,7 +643,6 @@
             position: relative;
             border-radius: 15px;
             overflow: hidden;
-            group: 'card';
         }
 
         .project-card:nth-child(1) { animation-delay: 0.1s; }
@@ -727,7 +726,7 @@
 
         /* ========== CONTACT SECTION ========== */
         .contact {
-            background: linear-gradient(135deg, var(--secondary) 0%, #4c29a4 100%);
+            background: #5b57e3;
             color: white;
             text-align: center;
             padding: 7px 20px;
@@ -1008,6 +1007,291 @@
     color:#777;
     font-size:16px;
 }
+
+/* ========== ACHIEVEMENTS SECTION ========== */
+.achievements-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.achievements-section::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 145, 2, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    top: -200px;
+    right: -200px;
+    z-index: 0;
+}
+
+.achievements-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.achievement-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.achievement-card:hover::before {
+    transform: scaleX(1);
+}
+
+.achievement-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 60px rgba(255, 145, 2, 0.2);
+    border-color: var(--primary);
+}
+
+.achievement-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.achievement-card:nth-child(1) .achievement-icon { animation-delay: 0s; }
+.achievement-card:nth-child(2) .achievement-icon { animation-delay: 0.2s; }
+.achievement-card:nth-child(3) .achievement-icon { animation-delay: 0.4s; }
+.achievement-card:nth-child(4) .achievement-icon { animation-delay: 0.6s; }
+
+.achievement-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 15px 0 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.achievement-label {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+@media(max-width: 768px) {
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 50px auto 0;
+    }
+    
+    .achievement-number {
+        font-size: 2.5rem;
+    }
+}
+
+/* ========== CUSTOMER REVIEWS SECTION ========== */
+.reviews-section {
+    padding: 80px 0;
+    background: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.reviews-section::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(57, 5, 243, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    top: -200px;
+    left: -200px;
+    z-index: 0;
+}
+
+.reviews-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.reviews-title {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.reviews-scroll-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.reviews-scroll-wrapper::before,
+.reviews-scroll-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.reviews-scroll-wrapper::before {
+    left: 0;
+    background: linear-gradient(90deg, white 0%, transparent 100%);
+}
+
+.reviews-scroll-wrapper::after {
+    right: 0;
+    background: linear-gradient(270deg, white 0%, transparent 100%);
+}
+
+.reviews-track {
+    display: flex;
+    gap: 30px;
+    animation: scroll-reviews 40s linear infinite;
+    width: fit-content;
+}
+
+.reviews-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-reviews {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.review-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    min-width: 400px;
+    max-width: 400px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.review-card::before {
+    content: '\201C';
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-size: 80px;
+    color: rgba(255, 145, 2, 0.15);
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(255, 145, 2, 0.15);
+    border-color: var(--primary);
+}
+
+.review-content {
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.review-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.review-rating {
+    color: #ffc107;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.author-info h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #222;
+    font-weight: 600;
+}
+
+.author-info p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #888;
+}
+
+@media(max-width: 768px) {
+    .review-card {
+        min-width: 320px;
+        max-width: 320px;
+        padding: 25px;
+    }
+    
+    .reviews-scroll-wrapper::before,
+    .reviews-scroll-wrapper::after {
+        width: 50px;
+    }
+}
     </style>
 </head>
 
@@ -1125,7 +1409,13 @@ Payment gateway integration</p>
                 </div>
             </div>
             <div class="project-info">
-                <h3>E-Commerce Website Development </h3>
+                <h3>E-Commerce Website Development</h3>
+                <p style="margin-top: 10px; font-size: 14px; color: #666; text-align: left; line-height: 1.6;">
+                    <strong style="color: #ff9102;">Problem:</strong><br>
+                    The client managed orders manually through WhatsApp, causing delays and poor organization.<br><br>
+                    <strong style="color: #3905f3;">Solution:</strong><br>
+                    We developed an e-commerce website to simplify product browsing, online ordering, and overall business management.
+                </p>
             </div>
         </a>
 
@@ -1138,6 +1428,12 @@ Payment gateway integration</p>
             </div>
             <div class="project-info">
                 <h3>Daily Waste Collection System</h3>
+                <p style="margin-top: 10px; font-size: 14px; color: #666; text-align: left; line-height: 1.6;">
+                    <strong style="color: #ff9102;">Problem:</strong><br>
+                    Manual tracking of waste collection led to missed pickups and inefficient route planning.<br><br>
+                    <strong style="color: #3905f3;">Solution:</strong><br>
+                    We built a digital system to automate scheduling, track collections in real-time, and optimize routes for efficiency.
+                </p>
             </div>
         </a>
 
@@ -1150,6 +1446,12 @@ Payment gateway integration</p>
             </div>
             <div class="project-info">
                 <h3>IT Company Website</h3>
+                <p style="margin-top: 10px; font-size: 14px; color: #666; text-align: left; line-height: 1.6;">
+                    <strong style="color: #ff9102;">Problem:</strong><br>
+                    Lack of professional online presence limited client reach and credibility.<br><br>
+                    <strong style="color: #3905f3;">Solution:</strong><br>
+                    We created a modern, responsive website showcasing services, portfolio, and client testimonials to attract more business.
+                </p>
             </div>
         </a>
 
@@ -1162,6 +1464,12 @@ Payment gateway integration</p>
             </div>
             <div class="project-info">
                 <h3>Facility Management & Manpower Services</h3>
+                <p style="margin-top: 10px; font-size: 14px; color: #666; text-align: left; line-height: 1.6;">
+                    <strong style="color: #ff9102;">Problem:</strong><br>
+                    Manual coordination of facility services and manpower led to delays and communication gaps.<br><br>
+                    <strong style="color: #3905f3;">Solution:</strong><br>
+                    We developed a comprehensive platform for service booking, staff management, and real-time communication.
+                </p>
             </div>
         </a>
          <a href="https://saravanastoresbilling.in/" target="_blank" class="project-card scroll-reveal">
@@ -1173,6 +1481,12 @@ Payment gateway integration</p>
             </div>
             <div class="project-info">
                 <h3>Saravana Stores Billing System</h3>
+                <p style="margin-top: 10px; font-size: 14px; color: #666; text-align: left; line-height: 1.6;">
+                    <strong style="color: #ff9102;">Problem:</strong><br>
+                    Traditional billing process was slow, prone to errors, and lacked inventory integration.<br><br>
+                    <strong style="color: #3905f3;">Solution:</strong><br>
+                    We implemented a fast, accurate digital billing system with inventory management and sales analytics.
+                </p>
             </div>
         </a>
          <a href="https://malarcrm.com/" target="_blank" class="project-card scroll-reveal">
@@ -1184,11 +1498,205 @@ Payment gateway integration</p>
             </div>
             <div class="project-info">
                 <h3>Malar CRM</h3>
+                <p style="margin-top: 10px; font-size: 14px; color: #666; text-align: left; line-height: 1.6;">
+                    <strong style="color: #ff9102;">Problem:</strong><br>
+                    Scattered customer data and manual follow-ups resulted in lost opportunities and poor customer relationships.<br><br>
+                    <strong style="color: #3905f3;">Solution:</strong><br>
+                    We created a custom CRM system to centralize customer data, automate follow-ups, and track sales pipelines effectively.
+                </p>
             </div>
         </a>
 
     </div>
 </section>
+
+<!-- CUSTOMER REVIEWS SECTION -->
+<section class="reviews-section scroll-reveal">
+    <div class="reviews-container">
+        <h2 class="section-title reviews-title"> What Our Clients Say</h2>
+        
+        <div class="reviews-scroll-wrapper">
+            <div class="reviews-track">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-content">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"IT Malar transformed our business with their excellent e-commerce website. Sales increased by 150% in just 3 months! Their team is professional, responsive, and truly understands client needs."</p>
+                    </div>
+                    <div class="review-author">
+                        <div class="author-avatar">R</div>
+                        <div class="author-info">
+                            <h4>Rajesh Kumar</h4>
+                            <p>CEO, Mahinzo Stores</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-content">
+                        <div class="review-rating">⭐⭐⭐⭐</div>
+                        <p class="review-text">"Outstanding service! They delivered our facility management website on time and within budget. The design is modern and the functionality is exactly what we needed. Highly recommend!"</p>
+                    </div>
+                    <div class="review-author">
+                        <div class="author-avatar">P</div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Manager, Mahin Facility Services</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-content">
+                        <div class="review-rating">⭐⭐⭐⭐</div>
+                        <p class="review-text">"The custom CRM system they built has revolutionized how we manage our customers. Everything is organized, automated, and efficient. Best investment we've made for our business!"</p>
+                    </div>
+                    <div class="review-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Arun Vijay</h4>
+                            <p>Director, Malar Groups</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="review-content">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Their digital marketing services helped us reach a wider audience. Instagram and Facebook ads campaigns were incredibly effective. Our brand visibility has improved significantly!"</p>
+                    </div>
+                    <div class="review-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Meena Lakshmi</h4>
+                            <p>Marketing Head, Retail Chain</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Review 5 -->
+                <div class="review-card">
+                    <div class="review-content">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Professional, skilled, and dedicated team! They developed our billing system which is fast, accurate, and easy to use. Customer support is excellent. Thank you IT Malar!"</p>
+                    </div>
+                    <div class="review-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Sundar Rajan</h4>
+                            <p>Owner, Saravana Stores</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Review 6 -->
+                <div class="review-card">
+                    <div class="review-content">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Working with IT Malar was a great experience. They listened to our requirements and delivered beyond expectations. The waste collection system they built is user-friendly and efficient."</p>
+                    </div>
+                    <div class="review-author">
+                        <div class="author-avatar">K</div>
+                        <div class="author-info">
+                            <h4>Karthik Prasad</h4>
+                            <p>Operations Manager</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Duplicate reviews for seamless loop -->
+                <div class="review-card">
+                    <div class="review-content">
+                        <div class="review-rating">⭐⭐⭐</div>
+                        <p class="review-text">"IT Malar transformed our business with their excellent e-commerce website. Sales increased by 150% in just 3 months! Their team is professional, responsive, and truly understands client needs."</p>
+                    </div>
+                    <div class="review-author">
+                        <div class="author-avatar">R</div>
+                        <div class="author-info">
+                            <h4>Rajesh Kumar</h4>
+                            <p>CEO, Mahinzo Stores</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-content">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Outstanding service! They delivered our facility management website on time and within budget. The design is modern and the functionality is exactly what we needed. Highly recommend!"</p>
+                    </div>
+                    <div class="review-author">
+                        <div class="author-avatar">P</div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Manager, Mahin Facility Services</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-content">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"The custom CRM system they built has revolutionized how we manage our customers. Everything is organized, automated, and efficient. Best investment we've made for our business!"</p>
+                    </div>
+                    <div class="review-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Arun Vijay</h4>
+                            <p>Director, Malar Groups</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-content">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Their digital marketing services helped us reach a wider audience. Instagram and Facebook ads campaigns were incredibly effective. Our brand visibility has improved significantly!"</p>
+                    </div>
+                    <div class="review-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Meena Lakshmi</h4>
+                            <p>Marketing Head, Retail Chain</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-content">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Professional, skilled, and dedicated team! They developed our billing system which is fast, accurate, and easy to use. Customer support is excellent. Thank you IT Malar!"</p>
+                    </div>
+                    <div class="review-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Sundar Rajan</h4>
+                            <p>Owner, Saravana Stores</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-content">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Working with IT Malar was a great experience. They listened to our requirements and delivered beyond expectations. The waste collection system they built is user-friendly and efficient."</p>
+                    </div>
+                    <div class="review-author">
+                        <div class="author-avatar">K</div>
+                        <div class="author-info">
+                            <h4>Karthik Prasad</h4>
+                            <p>Operations Manager</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
 <!--  TECHNOLOGIES --> 
  <section id="tech" class="about scroll-reveal">
      <div class="about-container"> 
@@ -1199,10 +1707,39 @@ Payment gateway integration</p>
         <p>Databases: MySQL , MongoDB</p>
     </div> </section>
   <!--  ACHIEVEMENTS --> 
-   <section class="why scroll-reveal">
-     <div class="why-container"> 
-        <h2 class="section-title">🏆 Our Achievements</h2> 
-        <p> 10+ Projects Completed</p> <p> 5+ Happy Clients</p> <p> 2+ Years of Experience</p> <p> 100% Client Satisfaction</p> </div> </section>
+<!-- ACHIEVEMENTS SECTION -->
+<section class="achievements-section scroll-reveal">
+    <div class="achievements-container">
+        <h2 class="section-title">🏆 Our Achievements</h2>
+        <div class="achievements-grid">
+            
+            <div class="achievement-card scroll-reveal">
+                <div class="achievement-icon">📊</div>
+                <div class="achievement-number">10+</div>
+                <div class="achievement-label">Projects Successfully Completed</div>
+            </div>
+            
+            <div class="achievement-card scroll-reveal">
+                <div class="achievement-icon">😊</div>
+                <div class="achievement-number">5+</div>
+                <div class="achievement-label">Satisfied Clients Worldwide</div>
+            </div>
+            
+            <div class="achievement-card scroll-reveal">
+                <div class="achievement-icon">⏳</div>
+                <div class="achievement-number">2+</div>
+                <div class="achievement-label">Years of Industry Experience</div>
+            </div>
+            
+            <div class="achievement-card scroll-reveal">
+                <div class="achievement-icon">⭐</div>
+                <div class="achievement-number">100%</div>
+                <div class="achievement-label">Client Satisfaction Rate</div>
+            </div>
+            
+        </div>
+    </div>
+</section>
         <!--  TEAM --> 
           <section class="about scroll-reveal">
              <div class="about-container"> 
