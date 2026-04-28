@@ -1670,7 +1670,7 @@
 <!-- CUSTOMER REVIEWS SECTION -->
 <section class="reviews-section scroll-reveal">
     <div class="reviews-container">
-        <h2 class="section-title reviews-title">⭐ What Our Clients Say</h2>
+        <h2 class="section-title reviews-title"> What Our Clients Say</h2>
         
         <div class="reviews-scroll-wrapper">
             <div class="reviews-track">
@@ -1698,8 +1698,8 @@
                     <div class="review-author">
                         <div class="author-avatar">J</div>
                         <div class="author-info">
-                            <h4>John Smith</h4>
-                            <p>Business Owner - USA</p>
+                            <h4>John Peter</h4>
+                            <p>Business Owner - Kerala</p>
                         </div>
                     </div>
                 </div>
@@ -1729,7 +1729,7 @@
                         <div class="author-avatar">S</div>
                         <div class="author-info">
                             <h4>Sarah Williams</h4>
-                            <p>Marketing Director - UK</p>
+                            <p>Marketing Director - Chennai</p>
                         </div>
                     </div>
                 </div>
@@ -1758,8 +1758,8 @@
                     <div class="review-author">
                         <div class="author-avatar">M</div>
                         <div class="author-info">
-                            <h4>Michael Chen</h4>
-                            <p>E-commerce Manager - Singapore</p>
+                            <h4>Vijaya Kumar</h4>
+                            <p>E-commerce Manager - Tamil Nadu</p>
                         </div>
                     </div>
                 </div>
@@ -1818,8 +1818,8 @@
                     <div class="review-author">
                         <div class="author-avatar">D</div>
                         <div class="author-info">
-                            <h4>David Martinez</h4>
-                            <p>Entrepreneur - Canada</p>
+                            <h4>Pavithra</h4>
+                            <p>Entrepreneur - Tamil Nadu</p>
                         </div>
                     </div>
                 </div>
@@ -1847,8 +1847,8 @@
                     <div class="review-author">
                         <div class="author-avatar">J</div>
                         <div class="author-info">
-                            <h4>John Smith</h4>
-                            <p>Business Owner - USA</p>
+                            <h4>Jeyanthan K</h4>
+                            <p>Business Owner - Kerala</p>
                         </div>
                     </div>
                 </div>
@@ -1875,8 +1875,8 @@
                     <div class="review-author">
                         <div class="author-avatar">S</div>
                         <div class="author-info">
-                            <h4>Sarah Williams</h4>
-                            <p>Marketing Director - UK</p>
+                            <h4>Sara</h4>
+                            <p>Marketing Director - Chennai</p>
                         </div>
                     </div>
                 </div>
@@ -1903,8 +1903,8 @@
                     <div class="review-author">
                         <div class="author-avatar">M</div>
                         <div class="author-info">
-                            <h4>Michael Chen</h4>
-                            <p>E-commerce Manager - Singapore</p>
+                            <h4>Manish Kumar</h4>
+                            <p>E-commerce Manager - Tamil Nadu</p>
                         </div>
                     </div>
                 </div>
@@ -1917,7 +1917,7 @@
 <!--  TECHNOLOGIES --> 
 <section id="tech" class="about scroll-reveal">
     <div class="about-container"> 
-        <h2 class="section-title">🛠️ Our Technology Stack</h2> 
+        <h2 class="section-title">Our Technology Stack</h2> 
         <p style="font-size: 18px; margin-bottom: 40px; color: #555;">We use cutting-edge technologies and industry-standard tools to deliver robust, scalable, and high-performance solutions.</p>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; max-width: 1000px; margin-left: auto; margin-right: auto;">
