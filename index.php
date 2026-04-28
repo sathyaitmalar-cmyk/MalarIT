@@ -1545,6 +1545,24 @@
             </div>
         </a>
 
+        <a href="https://tharimalar.com/" target="_blank" class="project-card scroll-reveal">
+            <div class="project-image-wrapper">
+                <img src="image copy 8.png" alt="Thari Malar">
+                <div class="project-overlay">
+                    <div class="overlay-text">👥 View Details →</div>
+                </div>
+            </div>
+            <div class="project-info">
+                <h3>Thari Malar</h3>
+                <p style="margin-top: 10px; font-size: 14px; color: #666; text-align: left; line-height: 1.6;">
+                    <strong style="color: #ff9102;">Problem:</strong><br>
+                    Manual tracking of waste collection led to missed pickups and inefficient route planning.<br><br>
+                    <strong style="color: #3905f3;">Solution:</strong><br>
+                    We built a digital system to automate scheduling, track collections in real-time, and optimize routes for efficiency.
+                </p>
+            </div>
+        </a>
+
     </div>
 </section>
 
