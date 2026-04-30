@@ -123,6 +123,45 @@
             transform: translateY(-3px);
         }
 
+        .menu-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.14);
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5px;
+            transition: 0.3s ease;
+        }
+
+        .menu-toggle span {
+            width: 22px;
+            height: 2px;
+            background: white;
+            border-radius: 2px;
+            transition: 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            background: rgba(255, 255, 255, 0.24);
+        }
+
+        nav.menu-open .menu-toggle span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        nav.menu-open .menu-toggle span:nth-child(2) {
+            opacity: 0;
+        }
+
+        nav.menu-open .menu-toggle span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
         /* ========== HERO SECTION ========== */
         .hero {
             position: relative;
@@ -857,20 +896,58 @@
         @media(max-width: 768px) {
             nav {
                 padding: 12px 20px;
-                flex-direction: column;
-                gap: 15px;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 10px;
+                flex-wrap: wrap;
             }
 
             .logo {
-                width: 100%;
-                justify-content: center;
+                flex: 1;
+                justify-content: flex-start;
+                min-width: 0;
+            }
+
+            .logo-circle {
+                width: 42px;
+                height: 42px;
+                font-size: 18px;
+            }
+
+            .logo span {
+                font-size: 16px;
+                letter-spacing: 0;
+            }
+
+            .menu-toggle {
+                display: flex;
             }
 
             .nav-links {
                 flex-direction: column;
-                gap: 10px;
+                gap: 0;
                 width: 100%;
                 text-align: center;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                pointer-events: none;
+                flex-basis: 100%;
+                border-radius: 8px;
+                background: rgba(255, 255, 255, 0.12);
+                transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.35s ease;
+            }
+
+            nav.menu-open .nav-links {
+                max-height: 320px;
+                opacity: 1;
+                pointer-events: auto;
+                padding: 10px 0;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 12px 10px;
             }
 
             .hero h1 {
@@ -1297,6 +1374,12 @@
         <div class="logo-circle">IT</div>
         <span>IT Malar Pvt Ltd</span>
     </div>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
     <div class="nav-links">
         <a href="#home">Home</a>
@@ -2113,6 +2196,15 @@
 </a>
 
 <script>
+    const navElement = document.querySelector('nav');
+    const menuToggle = document.querySelector('.menu-toggle');
+
+    menuToggle.addEventListener('click', () => {
+        const isOpen = navElement.classList.toggle('menu-open');
+        menuToggle.setAttribute('aria-expanded', isOpen);
+        menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    });
+
     // Smooth scroll for nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -2120,6 +2212,9 @@
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                navElement.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Open navigation menu');
             }
         });
     });
