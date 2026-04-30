@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Malar Pvt Ltd - Animated Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>IT Malar Pvt Ltd - Professional IT Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -26,9 +25,16 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: "Times New Roman", Times, serif;
             overflow-x: hidden;
             background: var(--white);
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font-family: "Times New Roman", Times, serif;
         }
 
         /* ========== NAVBAR ========== */
@@ -211,7 +217,7 @@
         .hero h1 {
             font-size: clamp(2.5rem, 8vw, 4.5rem);
             margin-bottom: 20px;
-            font-family: 'Playfair Display', serif;
+            font-family: "Times New Roman", Times, serif;
             font-weight: 700;
             line-height: 1.2;
             animation: slideInDown 0.8s ease-out;
@@ -397,7 +403,7 @@
             font-size: 3rem;
             margin-bottom: 30px;
             color: rgb(0, 0, 0);
-            font-family: 'Playfair Display', serif;
+            font-family: "Times New Roman", Times, serif;
             text-align: center;
             animation: fadeInUp 0.8s ease-out;
             position: relative;
@@ -768,7 +774,7 @@
             background: #5b57e3;
             color: white;
             text-align: center;
-            padding: 7px 20px;
+            padding: 70px 20px;
             position: relative;
             overflow: hidden;
         }
@@ -798,7 +804,7 @@
         }
 
         .contact-container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: auto;
             position: relative;
             z-index: 1;
@@ -808,24 +814,91 @@
             animation: fadeInUp 0.8s ease-out;
         }
 
-        .contact p {
-            font-size: 18px;
-            margin: 20px 0;
-            animation: fadeInUp 0.8s ease-out backwards;
-            display: inline-block;
-            padding: 10px 20px;
-            transition: all 0.3s ease;
+        .contact .section-title {
+            color: white;
         }
 
-        .contact p:nth-of-type(1) { animation-delay: 0.2s; }
-        .contact p:nth-of-type(2) { animation-delay: 0.3s; }
+        .contact-intro {
+            max-width: 760px;
+            margin: 18px auto 35px;
+            font-size: 18px;
+            line-height: 1.7;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease-out 0.1s backwards;
+        }
 
-        .contact p:hover {
-            transform: scale(1.05);
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin: 35px auto;
+            text-align: left;
+        }
+
+        .contact-item {
+            display: grid;
+            grid-template-columns: 48px 1fr;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 22px;
+            background: rgba(255, 255, 255, 0.13);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out backwards;
+        }
+
+        .contact-item:nth-child(1) { animation-delay: 0.15s; }
+        .contact-item:nth-child(2) { animation-delay: 0.2s; }
+        .contact-item:nth-child(3) { animation-delay: 0.25s; }
+        .contact-item:nth-child(4) { animation-delay: 0.3s; }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: white;
+            color: #5b57e3;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .contact-item h3 {
+            margin-bottom: 8px;
+            font-size: 18px;
+            color: white;
+        }
+
+        .contact-item a,
+        .contact-item p {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 1.6;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
+        .contact-closing {
+            margin-top: 24px;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 1.5;
         }
 
         .contact-buttons {
-            margin-top: 3px;
+            margin-top: 28px;
             display: flex;
             gap: 20px;
             justify-content: center;
@@ -991,6 +1064,46 @@
                 width: 30px;
                 height: 30px;
             }
+
+            .contact {
+                padding: 55px 16px;
+            }
+
+            .contact-intro {
+                font-size: 16px;
+                margin-bottom: 26px;
+            }
+
+            .contact-details {
+                grid-template-columns: 1fr;
+                gap: 14px;
+                margin: 28px auto;
+            }
+
+            .contact-item {
+                grid-template-columns: 42px 1fr;
+                gap: 14px;
+                padding: 18px;
+            }
+
+            .contact-icon {
+                width: 42px;
+                height: 42px;
+                font-size: 17px;
+            }
+
+            .contact-item h3 {
+                font-size: 17px;
+            }
+
+            .contact-item a,
+            .contact-item p {
+                font-size: 15px;
+            }
+
+            .contact-closing {
+                font-size: 18px;
+            }
         }
 
         /* ========== LOADING ANIMATION ========== */
@@ -1122,11 +1235,11 @@
 
 .achievement-card {
     background: white;
-    padding: 40px 30px;
-    border-radius: 20px;
+    padding: 34px 28px;
+    border-radius: 8px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
     transition: all 0.4s ease;
-    border: 2px solid transparent;
+    border: 1px solid rgba(0, 0, 0, 0.06);
     position: relative;
     overflow: hidden;
 }
@@ -1148,16 +1261,25 @@
 }
 
 .achievement-card:hover {
-    transform: translateY(-15px);
+    transform: translateY(-8px);
     box-shadow: 0 20px 60px rgba(255, 145, 2, 0.2);
     border-color: var(--primary);
 }
 
 .achievement-icon {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    display: inline-block;
-    animation: bounce 2s ease-in-out infinite;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 96px;
+    height: 38px;
+    padding: 0 16px;
+    margin-bottom: 18px;
+    border-radius: 999px;
+    background: rgba(255, 145, 2, 0.12);
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 700;
+    animation: fadeInUp 0.8s ease-out backwards;
 }
 
 .achievement-card:nth-child(1) .achievement-icon { animation-delay: 0s; }
@@ -1166,18 +1288,25 @@
 .achievement-card:nth-child(4) .achievement-icon { animation-delay: 0.6s; }
 
 .achievement-number {
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 800;
     color: var(--primary);
-    margin: 15px 0 10px;
-    font-family: 'Playfair Display', serif;
+    margin: 8px 0 10px;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .achievement-label {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: #555;
     font-weight: 500;
     line-height: 1.4;
+}
+
+.achievement-note {
+    margin-top: 12px;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 @media(max-width: 768px) {
@@ -1394,11 +1523,11 @@
 <section id="home" class="hero">
     <div class="hero-content">
         <img src="6.png" alt="IT Malar Logo" class="hero-logo">
-        <h1>Grow Your Business with <span class="gradient-text">Innovative IT Solutions</span></h1>
-        <p class="hero-subtitle">Transforming Ideas into Digital Reality | Est. 2024 | India 🇮🇳 | Serving Global Clients Worldwide 🌍</p>
-        <p style="font-size: 18px; margin: 15px 0; opacity: 0.95; text-shadow: 0 5px 15px rgba(0,0,0,0.2); font-weight: 500;">We are a results-driven IT solutions company helping businesses scale with modern digital products.</p>
+        <h1>Professional IT Solutions for <span class="gradient-text">Global Businesses</span></h1>
+        <p class="hero-subtitle">Web Development | Mobile Applications | Business Software | Digital Growth</p>
+        <p style="font-size: 18px; margin: 15px 0; opacity: 0.95; text-shadow: 0 5px 15px rgba(0,0,0,0.2); font-weight: 500;">IT Malar Pvt Ltd helps businesses build reliable, scalable, and client-ready digital products.</p>
         <div class="hero-buttons">
-            <a href="https://wa.me/9962998253" class="btn" target="_blank">Get Free Consultation</a>
+            <a href="https://wa.me/919629583169" class="btn" target="_blank" rel="noopener">Get Free Consultation</a>
             <a href="#services" class="btn btn-secondary">Explore Services</a>
         </div>
     </div>
@@ -1408,42 +1537,38 @@
 <section id="about" class="about scroll-reveal">
     <div class="about-container">
         <h2 class="section-title">About Us</h2>
-        <p>We are a <strong>results-driven IT solutions company</strong> committed to helping businesses grow, scale, and succeed in the digital world. Based in <strong>India</strong>, we proudly serve clients globally with cutting-edge technology solutions.</p>
-        <p>As part of <strong>Malar Groups</strong>, a well-established organization founded by <strong>Selva Murugan K</strong> in <strong>2010</strong>, we leverage over a decade of industry excellence and business expertise. With a proven track record spanning more than 14 years, our parent company has built a strong foundation of trust, quality service, and customer satisfaction across multiple business verticals.</p>
-        <p><strong>IT Malar</strong>, founded in <strong>2024</strong> and led by <strong>Manoj Kumar S</strong>, Co-Founder, delivers impactful digital solutions tailored to your business needs. We specialize in web development, mobile applications, e-commerce platforms, custom software, and digital marketing services.</p>
+        <p>We are a <strong>results-driven IT solutions company</strong> based in <strong>India</strong>, serving businesses that need dependable technology, clean design, and measurable digital growth.</p>
+        <p>IT Malar is backed by <strong>Malar Groups</strong>, an established organization founded by <strong>Selva Murugan K</strong> in <strong>2010</strong>. This foundation gives us strong business discipline, service quality, and long-term client commitment.</p>
+        <p><strong>IT Malar</strong>, founded in <strong>2024</strong> and led by <strong>Manoj Kumar S</strong>, Co-Founder, delivers practical digital solutions for local and international clients. We specialize in websites, mobile applications, e-commerce platforms, custom software, CRM systems, and digital marketing.</p>
 
-        <h3 style="margin-top: 50px; font-size: 28px; color: #000; text-align: center;">💎 Our Core Values</h3>
+        <h3 style="margin-top: 50px; font-size: 28px; color: #000; text-align: center;">Our Core Values</h3>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 30px; max-width: 1000px; margin-left: auto; margin-right: auto;">
-            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-top: 4px solid var(--primary); text-align: center;">
-                <div style="font-size: 3rem; margin-bottom: 15px;">🎯</div>
-                <h4 style="color: var(--primary); margin-bottom: 10px; font-size: 20px;">Integrity</h4>
-                <p style="color: #666; font-size: 15px; line-height: 1.6;">We maintain transparency, honesty, and ethical practices in all our business relationships.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px; margin-top: 30px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+            <div style="background: white; padding: 28px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-top: 4px solid var(--primary); text-align: left;">
+                <h4 style="color: var(--primary); margin-bottom: 10px; font-size: 21px;">Integrity</h4>
+                <p style="color: #666; font-size: 16px; line-height: 1.7; text-align: left;">We communicate clearly, work transparently, and build trust through reliable delivery.</p>
             </div>
             
-            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-top: 4px solid var(--secondary); text-align: center;">
-                <div style="font-size: 3rem; margin-bottom: 15px;">💡</div>
-                <h4 style="color: var(--secondary); margin-bottom: 10px; font-size: 20px;">Innovation</h4>
-                <p style="color: #666; font-size: 15px; line-height: 1.6;">We embrace new technologies and creative solutions to solve complex business challenges.</p>
+            <div style="background: white; padding: 28px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-top: 4px solid var(--secondary); text-align: left;">
+                <h4 style="color: var(--secondary); margin-bottom: 10px; font-size: 21px;">Innovation</h4>
+                <p style="color: #666; font-size: 16px; line-height: 1.7; text-align: left;">We use modern technology and practical thinking to solve real business problems.</p>
             </div>
             
-            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-top: 4px solid var(--primary); text-align: center;">
-                <div style="font-size: 3rem; margin-bottom: 15px;">👥</div>
-                <h4 style="color: var(--primary); margin-bottom: 10px; font-size: 20px;">Client-First Approach</h4>
-                <p style="color: #666; font-size: 15px; line-height: 1.6;">Your success is our priority. We deliver solutions that drive real business results.</p>
+            <div style="background: white; padding: 28px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-top: 4px solid var(--primary); text-align: left;">
+                <h4 style="color: var(--primary); margin-bottom: 10px; font-size: 21px;">Client Focus</h4>
+                <p style="color: #666; font-size: 16px; line-height: 1.7; text-align: left;">We align every solution with the client's goals, timeline, budget, and growth plan.</p>
             </div>
             
-            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-top: 4px solid var(--secondary); text-align: center;">
-                <div style="font-size: 3rem; margin-bottom: 15px;">⚡</div>
-                <h4 style="color: var(--secondary); margin-bottom: 10px; font-size: 20px;">Excellence</h4>
-                <p style="color: #666; font-size: 15px; line-height: 1.6;">We strive for perfection in every project, ensuring quality and reliability.</p>
+            <div style="background: white; padding: 28px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-top: 4px solid var(--secondary); text-align: left;">
+                <h4 style="color: var(--secondary); margin-bottom: 10px; font-size: 21px;">Quality</h4>
+                <p style="color: #666; font-size: 16px; line-height: 1.7; text-align: left;">We focus on clean design, stable performance, security, and long-term maintainability.</p>
             </div>
         </div>
 
-        <h3 style="margin-top: 50px;">🚀 Our Mission</h3>
+        <h3 style="margin-top: 50px;">Our Mission</h3>
         <p style="font-size: 17px; font-weight: 500;">To empower businesses worldwide with innovative, scalable, and cost-effective IT solutions that drive digital transformation and sustainable growth.</p>
 
-        <h3>🎯 Our Vision</h3>
+        <h3>Our Vision</h3>
         <p style="font-size: 17px; font-weight: 500;">To become a globally recognized technology partner, known for delivering exceptional digital experiences and building long-term relationships based on trust, quality, and innovation.</p>
     </div>
 </section>
@@ -1454,42 +1579,42 @@
     <div class="service-container">
 
         <div class="service-box scroll-reveal">
-            <div class="service-icon">🌐</div>
+            <div class="service-icon">Web</div>
             <h3>Website Development</h3>
-            <p>Business websites, eCommerce platforms & custom web solutions tailored for your brand.</p>
+            <p>Business websites, e-commerce platforms, and custom web solutions tailored for your brand and market.</p>
             <p style="margin-top: 10px; font-size: 14px; color: #888; font-weight: 600;">Technologies: HTML5, CSS3, JavaScript, React.js, Node.js, PHP, Laravel</p>
         </div>
 
         <div class="service-box scroll-reveal">
-            <div class="service-icon">📱</div>
+            <div class="service-icon">App</div>
             <h3>Mobile App Development</h3>
-            <p>Native Android & iOS mobile applications with cutting-edge technology and user-friendly design.</p>
+            <p>Android and iOS mobile applications built with secure architecture and user-friendly design.</p>
             <p style="margin-top: 10px; font-size: 14px; color: #888; font-weight: 600;">Technologies: React Native, Flutter, Kotlin, Swift, Android Studio</p>
         </div>
 
         <div class="service-box scroll-reveal">
-            <div class="service-icon">🎨</div>
+            <div class="service-icon">UX</div>
             <h3>UI/UX Design</h3>
             <p>Modern, intuitive, and responsive user interface designs that enhance user experience and engagement.</p>
             <p style="margin-top: 10px; font-size: 14px; color: #888; font-weight: 600;">Tools: Figma, Adobe XD, Sketch, Photoshop, Illustrator</p>
         </div>
 
         <div class="service-box scroll-reveal">
-            <div class="service-icon">🛒</div>
+            <div class="service-icon">Shop</div>
             <h3>E-Commerce Solutions</h3>
             <p>Complete online store setup with secure payment gateway integration and inventory management.</p>
             <p style="margin-top: 10px; font-size: 14px; color: #888; font-weight: 600;">Platforms: WooCommerce, Shopify, Magento, Custom Solutions</p>
         </div>
 
         <div class="service-box scroll-reveal">
-            <div class="service-icon">🧩</div>
+            <div class="service-icon">CRM</div>
             <h3>Custom Software Development</h3>
             <p>Tailored software solutions, CRM/ERP systems, and business automation tools for your organization.</p>
             <p style="margin-top: 10px; font-size: 14px; color: #888; font-weight: 600;">Technologies: Python, Django, .NET, Java, Cloud Integration</p>
         </div>
 
         <div class="service-box scroll-reveal">
-            <div class="service-icon">📢</div>
+            <div class="service-icon">SEO</div>
             <h3>Digital Marketing</h3>
             <p>Strategic online marketing with Instagram Ads, Facebook Ads, SEO, and creative poster designs for maximum engagement.</p>
             <p style="margin-top: 10px; font-size: 14px; color: #888; font-weight: 600;">Services: Social Media Marketing, Google Ads, SEO, Content Marketing</p>
@@ -1500,18 +1625,18 @@
 <!-- WHY -->
 <section class="why scroll-reveal">
     <div class="why-container">
-        <h2 class="section-title">💡 Why Choose IT Malar?</h2>
-        <p style="font-size: 18px; margin-bottom: 40px; color: #555; background: transparent; border: none; box-shadow: none; padding: 0;">We combine technical expertise with a customer-centric approach to deliver exceptional digital solutions that drive business growth.</p>
+        <h2 class="section-title">Why Choose IT Malar?</h2>
+        <p style="font-size: 18px; margin-bottom: 40px; color: #555; background: transparent; border: none; box-shadow: none; padding: 0;">We combine technical expertise, clear communication, and structured project delivery to support business growth.</p>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: 30px auto;">
-            <p>⚡ Fast Delivery & Quick Turnaround Time</p>
-            <p>💰 Affordable & Transparent Pricing</p>
-            <p>🌟 Premium Quality & Attention to Detail</p>
-            <p>🤝 24/7 Customer Support & Maintenance</p>
-            <p>🎨 Custom Solutions Tailored to Your Needs</p>
-            <p>🔒 Secure & Scalable Architecture</p>
-            <p>🌍 Global Experience with Local Understanding</p>
-            <p>📊 Data-Driven Approach & Analytics</p>
+            <p>Fast Delivery and Quick Turnaround Time</p>
+            <p>Affordable and Transparent Pricing</p>
+            <p>Premium Quality and Attention to Detail</p>
+            <p>Customer Support and Maintenance</p>
+            <p>Custom Solutions Tailored to Your Needs</p>
+            <p>Secure and Scalable Architecture</p>
+            <p>Global Delivery with Local Understanding</p>
+            <p>Data-Driven Approach and Analytics</p>
         </div>
     </div>
 </section>
@@ -1526,7 +1651,7 @@
             <div class="project-image-wrapper">
                 <img src="mahinzo.jpg" alt="Mahinzo Project">
                 <div class="project-overlay">
-                    <div class="overlay-text">🛍️ Visit Project →</div>
+                    <div class="overlay-text">Visit Project</div>
                 </div>
             </div>
             <div class="project-info">
@@ -1544,7 +1669,7 @@
             <div class="project-image-wrapper">
                 <img src="attendance.jpg" alt="Daily Wastage Collection System">
                 <div class="project-overlay">
-                    <div class="overlay-text">👥 View Details →</div>
+                    <div class="overlay-text">View Details</div>
                 </div>
             </div>
             <div class="project-info">
@@ -1562,7 +1687,7 @@
             <div class="project-image-wrapper">
                 <img src="it.jpg" alt="IT Services">
                 <div class="project-overlay">
-                    <div class="overlay-text">💼 Explore →</div>
+                    <div class="overlay-text">Explore</div>
                 </div>
             </div>
             <div class="project-info">
@@ -1580,7 +1705,7 @@
             <div class="project-image-wrapper">
                 <img src="man.jpg" alt="Facility Management">
                 <div class="project-overlay">
-                    <div class="overlay-text">🏢 Learn More →</div>
+                    <div class="overlay-text">Learn More</div>
                 </div>
             </div>
             <div class="project-info">
@@ -1597,7 +1722,7 @@
             <div class="project-image-wrapper">
                 <img src="saravana.png" alt="Saravana Stores Billing System">
                 <div class="project-overlay">
-                    <div class="overlay-text">🏢 Learn More →</div>
+                    <div class="overlay-text">Learn More</div>
                 </div>
             </div>
             <div class="project-info">
@@ -1614,7 +1739,7 @@
             <div class="project-image-wrapper">
                 <img src="crm.jpg" alt="Malar CRM">
                 <div class="project-overlay">
-                    <div class="overlay-text">🏢 Learn More →</div>
+                    <div class="overlay-text">Learn More</div>
                 </div>
             </div>
             <div class="project-info">
@@ -1632,7 +1757,7 @@
             <div class="project-image-wrapper">
                 <img src="image copy 8.png" alt="Thari Malar">
                 <div class="project-overlay">
-                    <div class="overlay-text">👥 View Details →</div>
+                    <div class="overlay-text">View Details</div>
                 </div>
             </div>
             <div class="project-info">
@@ -1652,31 +1777,31 @@
 <!-- CASE STUDIES SECTION -->
 <section class="about scroll-reveal">
     <div class="about-container">
-        <h2 class="section-title">📊 Case Studies</h2>
+        <h2 class="section-title">Case Studies</h2>
         <p style="font-size: 18px; margin-bottom: 50px; color: #555;">Discover how we've helped businesses transform their operations and achieve remarkable results through innovative digital solutions.</p>
         
         <!-- Case Study 1 -->
         <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); margin-bottom: 40px; border-left: 6px solid var(--primary);">
-            <h3 style="color: var(--primary); font-size: 26px; margin-bottom: 20px;">🛍️ E-Commerce Transformation for Retail Brand</h3>
+            <h3 style="color: var(--primary); font-size: 26px; margin-bottom: 20px;">E-Commerce Transformation for Retail Brand</h3>
             <p style="font-size: 16px; color: #666; line-height: 1.8; margin-bottom: 15px;"><strong style="color: #000;">Client:</strong> Mahinzo Stores (India-based Retail Business)</p>
             
             <div style="margin-top: 25px;">
-                <h4 style="color: #ff9102; font-size: 20px; margin-bottom: 10px;">❌ The Problem</h4>
+                <h4 style="color: #ff9102; font-size: 20px; margin-bottom: 10px;">The Problem</h4>
                 <p style="color: #555; line-height: 1.8; font-size: 16px;">The client was managing all orders manually through WhatsApp, leading to frequent miscommunication, delayed responses, order tracking issues, and poor inventory management. This resulted in lost sales opportunities and customer dissatisfaction.</p>
             </div>
             
             <div style="margin-top: 25px;">
-                <h4 style="color: #3905f3; font-size: 20px; margin-bottom: 10px;">🎯 Our Approach</h4>
+                <h4 style="color: #3905f3; font-size: 20px; margin-bottom: 10px;">Our Approach</h4>
                 <p style="color: #555; line-height: 1.8; font-size: 16px;">We conducted a thorough analysis of their business workflow and customer behavior. Our team designed a comprehensive e-commerce platform that simplified product browsing, enabled seamless online ordering, integrated payment gateways, and automated inventory management.</p>
             </div>
             
             <div style="margin-top: 25px;">
-                <h4 style="color: #ff9102; font-size: 20px; margin-bottom: 10px;">⚙️ Execution</h4>
+                <h4 style="color: #ff9102; font-size: 20px; margin-bottom: 10px;">Execution</h4>
                 <p style="color: #555; line-height: 1.8; font-size: 16px;">We developed a responsive e-commerce website using React.js for frontend, Node.js for backend, and integrated Razorpay payment gateway. We implemented real-time inventory tracking, automated email notifications, and admin dashboard for order management. The entire project was completed in 6 weeks with comprehensive testing and client training.</p>
             </div>
             
             <div style="margin-top: 25px;">
-                <h4 style="color: #3905f3; font-size: 20px; margin-bottom: 10px;">📈 Results</h4>
+                <h4 style="color: #3905f3; font-size: 20px; margin-bottom: 10px;">Results</h4>
                 <ul style="color: #555; line-height: 2; font-size: 16px; margin-left: 20px;">
                     <li>150% increase in online sales within 3 months</li>
                     <li>70% reduction in order processing time</li>
@@ -1688,26 +1813,26 @@
         
         <!-- Case Study 2 -->
         <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); margin-bottom: 40px; border-left: 6px solid var(--secondary);">
-            <h3 style="color: var(--secondary); font-size: 26px; margin-bottom: 20px;">♻️ Digital Waste Management System</h3>
+            <h3 style="color: var(--secondary); font-size: 26px; margin-bottom: 20px;">Digital Waste Management System</h3>
             <p style="font-size: 16px; color: #666; line-height: 1.8; margin-bottom: 15px;"><strong style="color: #000;">Client:</strong> Municipal Corporation & Waste Management Service Provider</p>
             
             <div style="margin-top: 25px;">
-                <h4 style="color: #ff9102; font-size: 20px; margin-bottom: 10px;">❌ The Problem</h4>
+                <h4 style="color: #ff9102; font-size: 20px; margin-bottom: 10px;">The Problem</h4>
                 <p style="color: #555; line-height: 1.8; font-size: 16px;">Manual tracking of daily waste collection resulted in missed pickups, inefficient route planning, lack of accountability, and customer complaints. There was no centralized system to monitor field workers or track collection schedules.</p>
             </div>
             
             <div style="margin-top: 25px;">
-                <h4 style="color: #3905f3; font-size: 20px; margin-bottom: 10px;">🎯 Our Approach</h4>
+                <h4 style="color: #3905f3; font-size: 20px; margin-bottom: 10px;">Our Approach</h4>
                 <p style="color: #555; line-height: 1.8; font-size: 16px;">We proposed a comprehensive digital solution with GPS tracking, automated scheduling, real-time monitoring, and mobile application for field workers. The system was designed to optimize routes and provide complete transparency.</p>
             </div>
             
             <div style="margin-top: 25px;">
-                <h4 style="color: #ff9102; font-size: 20px; margin-bottom: 10px;">⚙️ Execution</h4>
+                <h4 style="color: #ff9102; font-size: 20px; margin-bottom: 10px;">Execution</h4>
                 <p style="color: #555; line-height: 1.8; font-size: 16px;">Developed a web-based admin panel using Laravel and MySQL, along with a mobile app using React Native for collection staff. Implemented GPS integration, automated route optimization algorithms, and real-time notifications. Included reporting dashboard with analytics and customer complaint management system.</p>
             </div>
             
             <div style="margin-top: 25px;">
-                <h4 style="color: #3905f3; font-size: 20px; margin-bottom: 10px;">📈 Results</h4>
+                <h4 style="color: #3905f3; font-size: 20px; margin-bottom: 10px;">Results</h4>
                 <ul style="color: #555; line-height: 2; font-size: 16px; margin-left: 20px;">
                     <li>85% reduction in missed pickups</li>
                     <li>40% improvement in operational efficiency</li>
@@ -1719,26 +1844,26 @@
         
         <!-- Case Study 3 -->
         <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-left: 6px solid var(--primary);">
-            <h3 style="color: var(--primary); font-size: 26px; margin-bottom: 20px;">💼 Custom CRM for Growing Business</h3>
+            <h3 style="color: var(--primary); font-size: 26px; margin-bottom: 20px;">Custom CRM for Growing Business</h3>
             <p style="font-size: 16px; color: #666; line-height: 1.8; margin-bottom: 15px;"><strong style="color: #000;">Client:</strong> Multi-service Business Group</p>
             
             <div style="margin-top: 25px;">
-                <h4 style="color: #ff9102; font-size: 20px; margin-bottom: 10px;">❌ The Problem</h4>
+                <h4 style="color: #ff9102; font-size: 20px; margin-bottom: 10px;">The Problem</h4>
                 <p style="color: #555; line-height: 1.8; font-size: 16px;">Customer data was scattered across multiple Excel sheets and WhatsApp chats. Manual follow-ups were inefficient, leading to lost sales opportunities and poor customer relationship management. No centralized system for tracking leads and sales pipeline.</p>
             </div>
             
             <div style="margin-top: 25px;">
-                <h4 style="color: #3905f3; font-size: 20px; margin-bottom: 10px;">🎯 Our Approach</h4>
+                <h4 style="color: #3905f3; font-size: 20px; margin-bottom: 10px;">Our Approach</h4>
                 <p style="color: #555; line-height: 1.8; font-size: 16px;">We designed a custom CRM tailored to their specific business processes, including lead management, automated follow-up reminders, sales pipeline tracking, and comprehensive reporting.</p>
             </div>
             
             <div style="margin-top: 25px;">
-                <h4 style="color: #ff9102; font-size: 20px; margin-bottom: 10px;">⚙️ Execution</h4>
+                <h4 style="color: #ff9102; font-size: 20px; margin-bottom: 10px;">Execution</h4>
                 <p style="color: #555; line-height: 1.8; font-size: 16px;">Built using Python Django framework with PostgreSQL database. Implemented role-based access control, automated email and SMS reminders, sales analytics dashboard, and integrated WhatsApp Business API for seamless communication. Provided comprehensive staff training and documentation.</p>
             </div>
             
             <div style="margin-top: 25px;">
-                <h4 style="color: #3905f3; font-size: 20px; margin-bottom: 10px;">📈 Results</h4>
+                <h4 style="color: #3905f3; font-size: 20px; margin-bottom: 10px;">Results</h4>
                 <ul style="color: #555; line-height: 2; font-size: 16px; margin-left: 20px;">
                     <li>200% increase in lead conversion rate</li>
                     <li>Centralized customer database with complete history</li>
@@ -1760,7 +1885,7 @@
                 <!-- Review 1 -->
                 <div class="review-card">
                     <div class="review-content">
-                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-rating">5.0 / 5</div>
                         <p class="review-text">"IT Malar transformed our business with their excellent e-commerce website. Sales increased by 150% in just 3 months! Their team is professional, responsive, and truly understands client needs. Highly recommended for anyone looking to grow their online presence."</p>
                     </div>
                     <div class="review-author">
@@ -1775,7 +1900,7 @@
                 <!-- Review 2 -->
                 <div class="review-card">
                     <div class="review-content">
-                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-rating">5.0 / 5</div>
                         <p class="review-text">"They delivered beyond expectations. The mobile app they developed is fast, secure, and user-friendly. Communication was excellent throughout the project, and they were always available to address our concerns. Great value for money!"</p>
                     </div>
                     <div class="review-author">
@@ -1790,7 +1915,7 @@
                 <!-- Review 3 -->
                 <div class="review-card">
                     <div class="review-content">
-                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-rating">5.0 / 5</div>
                         <p class="review-text">"Outstanding service! They delivered our facility management website on time and within budget. The design is modern, responsive, and exactly what we needed. Their attention to detail and professionalism is commendable."</p>
                     </div>
                     <div class="review-author">
@@ -1805,7 +1930,7 @@
                 <!-- Review 4 -->
                 <div class="review-card">
                     <div class="review-content">
-                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-rating">5.0 / 5</div>
                         <p class="review-text">"Working with IT Malar was a pleasure. They took time to understand our requirements and delivered a custom solution perfectly tailored to our business. The team is skilled, reliable, and always goes the extra mile. Excellent work!"</p>
                     </div>
                     <div class="review-author">
@@ -1820,7 +1945,7 @@
                 <!-- Review 5 -->
                 <div class="review-card">
                     <div class="review-content">
-                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-rating">5.0 / 5</div>
                         <p class="review-text">"The custom CRM system they built has revolutionized how we manage our customers. Everything is organized, automated, and efficient. The system is intuitive and our team adopted it quickly. Best investment we've made for our business!"</p>
                     </div>
                     <div class="review-author">
@@ -1835,7 +1960,7 @@
                 <!-- Review 6 -->
                 <div class="review-card">
                     <div class="review-content">
-                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-rating">5.0 / 5</div>
                         <p class="review-text">"Highly professional team with excellent technical skills. They developed our e-commerce platform with all the features we needed. The support after launch has been fantastic. I would definitely work with them again on future projects."</p>
                     </div>
                     <div class="review-author">
@@ -1850,7 +1975,7 @@
                 <!-- Review 7 -->
                 <div class="review-card">
                     <div class="review-content">
-                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-rating">4.5 / 5</div>
                         <p class="review-text">"Their digital marketing services helped us reach a wider audience. Instagram and Facebook ad campaigns were incredibly effective. Our brand visibility has improved significantly, and we're seeing great ROI. Thank you IT Malar!"</p>
                     </div>
                     <div class="review-author">
@@ -1865,7 +1990,7 @@
                 <!-- Review 8 -->
                 <div class="review-card">
                     <div class="review-content">
-                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-rating">3.5/ 5</div>
                         <p class="review-text">"Professional, skilled, and dedicated team! They developed our billing system which is fast, accurate, and easy to use. The implementation was smooth, and training was comprehensive. Customer support is excellent. Highly recommend!"</p>
                     </div>
                     <div class="review-author">
@@ -1880,7 +2005,7 @@
                 <!-- Review 9 -->
                 <div class="review-card">
                     <div class="review-content">
-                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-rating">5.0 / 5</div>
                         <p class="review-text">"Working with IT Malar was a great experience. They listened to our requirements and delivered beyond expectations. The waste collection system they built is user-friendly, efficient, and has significantly improved our operations. Excellent service!"</p>
                     </div>
                     <div class="review-author">
@@ -1895,7 +2020,7 @@
                 <!-- Review 10 -->
                 <div class="review-card">
                     <div class="review-content">
-                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-rating">5.0 / 5</div>
                         <p class="review-text">"Impressive work! They created a beautiful, responsive website for our business. The design is modern, navigation is intuitive, and the site loads fast. They understood our vision and brought it to life perfectly. Five stars!"</p>
                     </div>
                     <div class="review-author">
@@ -1910,7 +2035,7 @@
                 <!-- Duplicate reviews for seamless loop -->
                 <div class="review-card">
                     <div class="review-content">
-                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-rating">5.0 / 5</div>
                         <p class="review-text">"IT Malar transformed our business with their excellent e-commerce website. Sales increased by 150% in just 3 months! Their team is professional, responsive, and truly understands client needs. Highly recommended for anyone looking to grow their online presence."</p>
                     </div>
                     <div class="review-author">
@@ -1924,7 +2049,7 @@
                 
                 <div class="review-card">
                     <div class="review-content">
-                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-rating">4.6/ 5</div>
                         <p class="review-text">"They delivered beyond expectations. The mobile app they developed is fast, secure, and user-friendly. Communication was excellent throughout the project, and they were always available to address our concerns. Great value for money!"</p>
                     </div>
                     <div class="review-author">
@@ -1938,7 +2063,7 @@
                 
                 <div class="review-card">
                     <div class="review-content">
-                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-rating">5.0 / 5</div>
                         <p class="review-text">"Outstanding service! They delivered our facility management website on time and within budget. The design is modern, responsive, and exactly what we needed. Their attention to detail and professionalism is commendable."</p>
                     </div>
                     <div class="review-author">
@@ -1952,7 +2077,7 @@
                 
                 <div class="review-card">
                     <div class="review-content">
-                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-rating">4 / 5</div>
                         <p class="review-text">"Working with IT Malar was a pleasure. They took time to understand our requirements and delivered a custom solution perfectly tailored to our business. The team is skilled, reliable, and always goes the extra mile. Excellent work!"</p>
                     </div>
                     <div class="review-author">
@@ -1966,7 +2091,7 @@
                 
                 <div class="review-card">
                     <div class="review-content">
-                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-rating">3.5 / 5</div>
                         <p class="review-text">"The custom CRM system they built has revolutionized how we manage our customers. Everything is organized, automated, and efficient. The system is intuitive and our team adopted it quickly. Best investment we've made for our business!"</p>
                     </div>
                     <div class="review-author">
@@ -1980,7 +2105,7 @@
                 
                 <div class="review-card">
                     <div class="review-content">
-                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-rating">5.0 / 5</div>
                         <p class="review-text">"Highly professional team with excellent technical skills. They developed our e-commerce platform with all the features we needed. The support after launch has been fantastic. I would definitely work with them again on future projects."</p>
                     </div>
                     <div class="review-author">
@@ -2005,32 +2130,32 @@
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; max-width: 1000px; margin-left: auto; margin-right: auto;">
             <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--primary);">
-                <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 20px;">🎨 Frontend Development</h3>
+                <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 20px;">Frontend Development</h3>
                 <p style="color: #666; font-size: 16px; line-height: 1.8;">HTML5, CSS3, JavaScript, React.js, Next.js, Vue.js, Angular, Bootstrap, Tailwind CSS</p>
             </div>
             
             <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--secondary);">
-                <h3 style="color: var(--secondary); margin-bottom: 15px; font-size: 20px;">⚙️ Backend Development</h3>
+                <h3 style="color: var(--secondary); margin-bottom: 15px; font-size: 20px;">Backend Development</h3>
                 <p style="color: #666; font-size: 16px; line-height: 1.8;">Node.js, Express.js, Python, Django, PHP, Laravel, .NET, Java, Spring Boot</p>
             </div>
             
             <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--primary);">
-                <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 20px;">📱 Mobile Development</h3>
+                <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 20px;">Mobile Development</h3>
                 <p style="color: #666; font-size: 16px; line-height: 1.8;">React Native, Flutter, Kotlin, Swift, Android Studio, iOS Development</p>
             </div>
             
             <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--secondary);">
-                <h3 style="color: var(--secondary); margin-bottom: 15px; font-size: 20px;">🗄️ Databases</h3>
+                <h3 style="color: var(--secondary); margin-bottom: 15px; font-size: 20px;">Databases</h3>
                 <p style="color: #666; font-size: 16px; line-height: 1.8;">MySQL, PostgreSQL, MongoDB, Firebase, Redis, Microsoft SQL Server</p>
             </div>
             
             <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--primary);">
-                <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 20px;">☁️ Cloud & Hosting</h3>
+                <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 20px;">Cloud and Hosting</h3>
                 <p style="color: #666; font-size: 16px; line-height: 1.8;">AWS, Google Cloud, Microsoft Azure, Hostinger, DigitalOcean, Vercel</p>
             </div>
             
             <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--secondary);">
-                <h3 style="color: var(--secondary); margin-bottom: 15px; font-size: 20px;">🔧 Tools & Platforms</h3>
+                <h3 style="color: var(--secondary); margin-bottom: 15px; font-size: 20px;">Tools and Platforms</h3>
                 <p style="color: #666; font-size: 16px; line-height: 1.8;">Git, GitHub, Docker, Jenkins, Jira, Figma, VS Code, Postman</p>
             </div>
         </div>
@@ -2040,31 +2165,35 @@
 <!-- ACHIEVEMENTS SECTION -->
 <section class="achievements-section scroll-reveal">
     <div class="achievements-container">
-        <h2 class="section-title">🏆 Our Achievements</h2>
+        <h2 class="section-title">Our Achievements</h2>
         <div class="achievements-grid">
             
             <div class="achievement-card scroll-reveal">
-                <div class="achievement-icon">📊</div>
+                <div class="achievement-icon">Delivery</div>
                 <div class="achievement-number">10+</div>
                 <div class="achievement-label">Projects Successfully Completed</div>
+                <p class="achievement-note">Delivered across websites, CRM systems, e-commerce, and business software.</p>
             </div>
             
             <div class="achievement-card scroll-reveal">
-                <div class="achievement-icon">😊</div>
+                <div class="achievement-icon">Clients</div>
                 <div class="achievement-number">5+</div>
-                <div class="achievement-label">Satisfied Clients Worldwide</div>
+                <div class="achievement-label">Satisfied Clients</div>
+                <p class="achievement-note">Trusted by businesses for practical solutions and responsive support.</p>
             </div>
             
             <div class="achievement-card scroll-reveal">
-                <div class="achievement-icon">⏳</div>
+                <div class="achievement-icon">Experience</div>
                 <div class="achievement-number">2+</div>
                 <div class="achievement-label">Years of Industry Experience</div>
+                <p class="achievement-note">Focused experience in digital product development and IT services.</p>
             </div>
             
             <div class="achievement-card scroll-reveal">
-                <div class="achievement-icon">⭐</div>
+                <div class="achievement-icon">Quality</div>
                 <div class="achievement-number">98%</div>
                 <div class="achievement-label">Client Satisfaction Rate</div>
+                <p class="achievement-note">Built through clear communication, reliable delivery, and ongoing care.</p>
             </div>
             
         </div>
@@ -2139,36 +2268,36 @@
 <!-- FAQ SECTION -->
 <section class="about scroll-reveal">
     <div class="about-container">
-        <h2 class="section-title">❓ Frequently Asked Questions</h2>
+        <h2 class="section-title">Frequently Asked Questions</h2>
         
         <div style="text-align: left; max-width: 800px; margin: 40px auto;">
             <div style="margin-bottom: 30px; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--primary);">
-                <h3 style="color: var(--primary); margin-bottom: 10px; font-size: 20px;">💰 What is your pricing model?</h3>
+                <h3 style="color: var(--primary); margin-bottom: 10px; font-size: 20px;">What is your pricing model?</h3>
                 <p style="color: #555; line-height: 1.8; font-size: 16px;">We offer competitive and transparent pricing tailored to your project requirements. Our pricing varies based on project complexity, timeline, and features. We provide detailed quotes after understanding your needs. Contact us for a free consultation and custom quote.</p>
             </div>
             
             <div style="margin-bottom: 30px; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--secondary);">
-                <h3 style="color: var(--secondary); margin-bottom: 10px; font-size: 20px;">⏱️ How long does it take to complete a project?</h3>
+                <h3 style="color: var(--secondary); margin-bottom: 10px; font-size: 20px;">How long does it take to complete a project?</h3>
                 <p style="color: #555; line-height: 1.8; font-size: 16px;">Delivery time depends on project scope and complexity. A simple website takes 1-2 weeks, while complex applications may take 4-8 weeks. We provide accurate timelines during the consultation phase and ensure timely delivery without compromising quality.</p>
             </div>
             
             <div style="margin-bottom: 30px; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--primary);">
-                <h3 style="color: var(--primary); margin-bottom: 10px; font-size: 20px;">🛠️ Do you provide post-launch support?</h3>
+                <h3 style="color: var(--primary); margin-bottom: 10px; font-size: 20px;">Do you provide post-launch support?</h3>
                 <p style="color: #555; line-height: 1.8; font-size: 16px;">Yes! We offer 24/7 customer support and maintenance services. Our support includes bug fixes, updates, technical assistance, and ongoing improvements. We provide different support packages to suit your business needs and ensure your digital solution runs smoothly.</p>
             </div>
             
             <div style="margin-bottom: 30px; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--secondary);">
-                <h3 style="color: var(--secondary); margin-bottom: 10px; font-size: 20px;">🌍 Do you work with international clients?</h3>
+                <h3 style="color: var(--secondary); margin-bottom: 10px; font-size: 20px;">Do you work with international clients?</h3>
                 <p style="color: #555; line-height: 1.8; font-size: 16px;">Absolutely! We work with clients worldwide and have experience delivering projects across different time zones. We use modern communication tools and project management platforms to ensure seamless collaboration regardless of your location.</p>
             </div>
             
             <div style="margin-bottom: 30px; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--primary);">
-                <h3 style="color: var(--primary); margin-bottom: 10px; font-size: 20px;">💳 What payment methods do you accept?</h3>
+                <h3 style="color: var(--primary); margin-bottom: 10px; font-size: 20px;">What payment methods do you accept?</h3>
                 <p style="color: #555; line-height: 1.8; font-size: 16px;">We accept multiple payment methods including bank transfers, PayPal, credit cards, and other international payment gateways. We offer flexible payment plans with milestone-based payments to ensure transparency and trust throughout the project.</p>
             </div>
             
             <div style="padding: 25px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--secondary);">
-                <h3 style="color: var(--secondary); margin-bottom: 10px; font-size: 20px;">🔒 How do you ensure data security and confidentiality?</h3>
+                <h3 style="color: var(--secondary); margin-bottom: 10px; font-size: 20px;">How do you ensure data security and confidentiality?</h3>
                 <p style="color: #555; line-height: 1.8; font-size: 16px;">We take data security seriously. We implement industry-standard security practices, use secure development methodologies, and can sign NDAs to protect your intellectual property. All client data is handled with strict confidentiality and stored securely.</p>
             </div>
         </div>
@@ -2179,19 +2308,53 @@
 <section id="contact" class="contact scroll-reveal">
     <div class="contact-container">
         <h2 class="section-title">Contact Us</h2>
-        <p>📞 Phone: <strong>+91 9962998253</strong></p>
-        <p>📧 Email: <strong>bde@malargroups.com</strong></p>
-        <p>📍 Location: <strong>India | Serving Clients Globally</strong></p>
-        <div class="contact-buttons">
-            <a href="https://wa.me/9962998253" class="btn" target="_blank">WhatsApp Us</a>
-            <a href="mailto:bde@malargroups.com" class="btn btn-secondary">Send Email</a>
+        <p class="contact-intro">Ready to discuss your next digital product, website, app, or business solution? Connect with IT Malar and our team will get back to you promptly.</p>
+
+        <div class="contact-details">
+            <div class="contact-item">
+                <span class="contact-icon">P</span>
+                <div>
+                    <h3>Phone</h3>
+                    <a href="tel:+919629583169">+91 96295 83169</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">@</span>
+                <div>
+                    <h3>Email</h3>
+                    <a href="mailto:manoj@itmalar.com">manoj@itmalar.com</a><br>
+                    <a href="mailto:bde@malargroups.com">bde@malargroups.com</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">in</span>
+                <div>
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/company/it-malar-pvt-ltd/posts/" target="_blank" rel="noopener">linkedin.com/company/it-malar-pvt-ltd</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">L</span>
+                <div>
+                    <h3>Location</h3>
+                    <p>Aruppukottai, Virudhunagar (dist), Tamil Nadu, India</p>
+                </div>
+            </div>
         </div>
-        <p style="margin-top: 20px; font-size: 22px; font-weight: 600;">🤝 Let's Work Together and Grow Your Business!</p>
+
+        <div class="contact-buttons">
+            <a href="https://wa.me/919629583169" class="btn" target="_blank" rel="noopener">WhatsApp Us</a>
+            <a href="mailto:manoj@itmalar.com,bde@malargroups.com" class="btn btn-secondary">Send Email</a>
+        </div>
+        <p class="contact-closing">Let's work together and grow your business.</p>
     </div>
 </section>
 
 <!-- WHATSAPP BUTTON -->
-<a href="https://wa.me/9962998253" class="whatsapp" target="_blank" title="Chat with us on WhatsApp">
+<a href="https://wa.me/919629583169" class="whatsapp" target="_blank" rel="noopener" title="Chat with us on WhatsApp">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
@@ -2270,7 +2433,7 @@
         });
     });
 
-    console.log('IT Malar - Animated Portfolio loaded successfully! 🚀');
+    console.log('IT Malar portfolio loaded successfully.');
 </script>
 
 </body>
